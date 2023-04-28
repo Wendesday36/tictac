@@ -1,0 +1,11 @@
+.elem{
+    border: 1px solid purple;
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+}
+
+article{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+}
