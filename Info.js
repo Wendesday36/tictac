@@ -1,21 +1,26 @@
 import Jatekter from "./Jatek.js"
 import Elem from "./Elem.js"
 class Info{
-    constructor(){
-        const Infopanel = $("aside")
+    
+    constructor(Infopanel){
+        
         Infopanel.append(`<p id="lepes"></p>`)
         Infopanel.append(`<p id ="karakter"></p>`)
         Infopanel.append(`<p id = "vege"></p>`)
-       
+       this.lepes=$("#lepes")
+       this.karakter=$("#karakter")
+       this.vege=$("#vege")
+
     }
-    setLepes(){
-        this.lepes.html()
+    setLepes(lepes){
+        this.lepes.html(lepes).append(" .lépés")
+
     }
-    setKarakter(){
-        this.karakter.html()
+    setKarakter(karakter){
+        this.karakter.html(karakter)
     }
-    setVege(){
-        this.vege.html()
+    setVege(vege){
+        this.vege.html(vege).append("vége a játéknak")
     }
 }
 export default Info
