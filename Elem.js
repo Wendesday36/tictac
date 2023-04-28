@@ -1,11 +1,13 @@
 class Elem {
-    constructor(szuloElem) {
+    constructor(szuloElem,index) {
       this.szuloElem = szuloElem;
+      this.index=index
       szuloElem.append(`<div class="elem"><p></p></div>`);
       this.divElem = $(`article div:last-child`);
       this.pElem = this.divElem.children("p");
       this.divElem.on("click", () => {
-        this.setElem("X");
+        /* this.setElem("X"); */
+        this.esemenytrigger()
       });
     }
     setElem(ertek) {
@@ -13,7 +15,7 @@ class Elem {
     }
     esemenytrigger(){
         const esemeny = new CustomEvent("elemKivalasztas", {
-            detail: this,
+            detail: this.index,
           });
           window.dispatchEvent(esemeny)
     }

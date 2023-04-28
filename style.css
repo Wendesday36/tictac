@@ -1,6 +1,6 @@
 .elem{
-    border: 1px solid purple;
-    background-color: aqua;
+    border: 1px solid rgb(83, 3, 114);
+    background-color: rgb(181, 236, 198);
     width: 100px;
     height: 100px;
 }
