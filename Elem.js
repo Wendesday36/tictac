@@ -11,6 +11,15 @@ class Elem {
     setElem(ertek) {
       this.pElem.html(ertek);
     }
+    esemenytrigger(){
+        const esemeny = new CustomEvent("elemKivalasztas", {
+            detail: this,
+          });
+          window.dispatchEvent(esemeny)
+    }
+
+
+
   }
   
   export default Elem;
